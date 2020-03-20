@@ -1,4 +1,4 @@
-### CORONAVIRUS
+### GitHub Instagram Thing (name pending...)
 
 ## TEAMS
 FRONT END
@@ -11,10 +11,18 @@ BACK END
 
 ## MVP
 
-AN APP THAT WILL...
-* ASK FOR YOUR NAME + STATE
-* SAVE YOUR NAME AND STATE IN DATABASE
-* DISPLAY ACTIVE CORONAVIRUS CASES + STATS IN YOUR STATE
-* ALLOW YOU TO CLICK TO VIEW OTHER STATES OR COUNTRIES (BUT WON'T SAVE IN DATABASE)
-* WHEN NAME IS TYPED IN AGAIN (LIKE NEXT TIME YOU VISIT THE APP), THE MOST CURRENT STATS FOR YOUR STATE WILL BE DISPLAYED
+An app that will...
+* An instagram app for coders
+* Lets users input projects + images and will display and link to projects
+* Will rank the people who have signed up for the app
 
+## Techonologies
+* Node
+* Express
+* MySql
+* Handlebars
+* Figma
+* D3.js
+
+## APIs
+* GitHub
