@@ -4,14 +4,14 @@ Project 2
 ### GitHub Instagram Thing (name pending...)
 
 ## TEAMS
-FRONT END
-* ZACK
-* ETHAN
+Front end
+* Zack
+* Ethan
 
 
-BACK END
-* RICHARD
-* RACHEL
+Back end
+* Richard
+* Rachel
 
 
 ## MVP
