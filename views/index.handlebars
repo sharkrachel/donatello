@@ -1,33 +1,56 @@
-<div id="home">
+{{!-- shows most recently added projects --}}
+<!--New Homepage-->
+
+
+
+  <!--Need a jumbotron with text centered "GitCompare" possibly with background color-->
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+      <div class="jumbotron text-center">
+        <h1 class="title">GitCompare</h1>
       </div>
     </div>
   </div>
+  <!--Navbar-->
+  <div class="container">
+    <div class="row">
+      <!--Search button-->
+      <div class="col-sm text-center">
+        <a href="/search"><button class="search">Search User</button></a><!--Need a search page-->
+      </div>
+      <!--Compare button-->
+      <div class="col-sm text-center">
+        <a href="/compare"><button type class="compare">Add User</button></a> <!--Input page-->
+      </div>
+      <!--About button-->
+      <div class="col-sm text-center">
+        <a href="/about"><button class="about">Home</button></a><!--This is the home page??-->
+      </div>
+    </div>
+  </div>
+  <!--Create one row with 3 columns that will display images-->
+{{!-- Projects display --}}
+<div class="container">
+  <div class="row">
+    {{!-- loop through projects and display 3 most recent ones --}}
+      {{#each Projects}}
+      {{#if this.id <= 3}} {{!-- Only allow the first 3 newest projects to display --}}
+        <div class="col-sm-4">
+          <img src="{{this.project_Image}}">
+          <li>{{this.project_Name}}</li>
+        </div>
+      {{/if}}
+      {{/each}}
+  </div>
 </div>
+
+
+
+
+
+
+
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
