@@ -1,5 +1,4 @@
 module.exports = function (sequelize, DataTypes) {
-  //a table that holds the project name, technologies used, project link and an image for the project.
   var Projects = sequelize.define("Projects", {
     projectName: {
       type: DataTypes.STRING,
@@ -9,7 +8,6 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-
     projectLink: {
       type: DataTypes.STRING,
       allowNull: false
@@ -17,11 +15,25 @@ module.exports = function (sequelize, DataTypes) {
     projectImage: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    createdAt: {
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      type: DataTypes.DATE
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: 22
+    },
 
+  }, {
+    freezeTableName: true, // Model tableName will be the same as the model name
+    underscored: true
   });
 
-  //add foregin key to projects object so it can be connected to the individual user
+
   Projects.associate = function (models) {
     Projects.belongsTo(models.User, {
       foreignKey: {

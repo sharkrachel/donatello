@@ -34,12 +34,12 @@
   <div class="row">
     {{!-- loop through projects and display 3 most recent ones --}}
       {{#each Projects}}
-      {{#if this.id <= 3}} {{!-- Only allow the first 3 newest projects to display --}}
+      {{!-- {{#if this.}} Only allow the first 3 newest projects to display --}}
         <div class="col-sm-4">
-          <img src="{{this.project_Image}}">
-          <li>{{this.project_Name}}</li>
+          <img src="{{this.project_image}}">
+          <li>{{this.project_name}}</li>
         </div>
-      {{/if}}
+      {{!-- {{/if}} --}}
       {{/each}}
   </div>
 </div>

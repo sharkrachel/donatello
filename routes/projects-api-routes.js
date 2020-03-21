@@ -34,7 +34,7 @@ module.exports = function (app) {
       });
   });
 
-  app.delete("/api/posts/:id", function (req, res) {
+  app.delete("/api/projects/:id", function (req, res) {
     db.Projects.destroy({
       where: {
         id: req.params.id
