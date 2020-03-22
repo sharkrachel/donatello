@@ -7,8 +7,7 @@
     <title>Document</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -17,14 +16,14 @@
             Projects
         </div>
         <div class="search">
-            <form>
+           
                 <div class="form-group">
-                    <label for="user-name">User Name</label>
-                    <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                    <label for="github-user">User Name</label>
+                    <input type="text" class="form-control" id="github-user" aria-describedby="github-user"
                         placeholder="Enter GitHub user name">
                 </div>
                 <button type="submit" id="user-form-input" class="btn btn-primary">Submit</button>
-            </form>
+        
         </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -44,7 +43,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="add-project">
-                            <form>
+                            
                                 <div class="form-group">
                                     <label for="user-name">User Name</label>
                                     <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
@@ -72,10 +71,10 @@
                                         aria-describedby="project-image"
                                         placeholder="Enter URL link to the image you want displayed for your project">
                                 </div>
-                            </form>
+                    
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="new-project" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+                            <button type="button" id="new-project" class="btn btn-secondary">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -84,7 +83,9 @@
 
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="/js/projects.js"></script>
 </body>
 
 </html>

@@ -8,52 +8,57 @@ module.exports = function(app) {
       query.UserId = req.query.user_id;
     }
 
-    db.Projects.findAll({
+    db.Project.findAll({
       where: query,
       include: [db.User]
-    }).then(function(dbProjects) {
-      res.json(dbProjects);
+    }).then(function(dbProject) {
+      res.json(dbProject);
     });
   });
 
+
   // this will find only a single project - not sure if we need this
   app.get("/api/projects/:id", function(req, res) {
-    db.Projects.findAll({
+    db.Project.findAll({
       where: {
         user: req.params.id
       },
-      include: [db.Projects]
-    }).then(function(dbProjects) {
-      res.json(dbProjects);
+      include: [db.Project]
+    }).then(function(dbProject) {
+      res.json(dbProject);
     });
   });
 
   // POST route for saving a new project
   app.post("/api/projects", function(req, res) {
-    db.Projects.create(req.body).then(function(dbProjects) {
-      res.json(dbProjects);
+    
+
+  
+    console.log("req.body: ", req.body)
+    db.Project.create(req.body).then(function(dbProject) {
+      res.json(dbProject);
     });
   });
 
   // DELETE route for deleting projects
   app.delete("/api/projects/:id", function(req, res) {
-    db.Projects.destroy({
+    db.Project.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbProjects) {
-      res.json(dbProjects);
+    }).then(function(dbProject) {
+      res.json(dbProject);
     });
   });
 
   // PUT route for updating projects
   app.put("/api/projects", function(req, res) {
-    db.Projects.update(req.body, {
+    db.Project.update(req.body, {
       where: {
         id: req.body.id
       }
-    }).then(function(dbProjects) {
-      res.json(dbProjects);
+    }).then(function(dbProject) {
+      res.json(dbProject);
     });
   });
 };

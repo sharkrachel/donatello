@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var Projects = sequelize.define(
-    "Projects",
+  var Project = sequelize.define(
+    "Project",
     {
       projectName: {
         type: DataTypes.STRING,
@@ -24,15 +24,16 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         len: [1]
       }
+   
     }
   );
 
-  Projects.associate = function(models) {
-    Projects.belongsTo(models.User, {
+  Project.associate = function(models) {
+    Project.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-  return Projects;
+  return Project;
 };
