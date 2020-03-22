@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    var nameInput = $("#")
+$(document).ready(function () {
+
 })
