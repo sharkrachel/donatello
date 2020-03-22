@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      projectTech: {
-        type: DataTypes.STRING,
+      projectDescription: {
+        type: DataTypes.TEXT,
         allowNull: false,
         len: [1]
       },
@@ -23,22 +23,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
         len: [1]
-      },
-      createdAt: {
-        type: DataTypes.DATE
-      },
-      updatedAt: {
-        type: DataTypes.DATE
-      },
-      userId: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        defaultValue: 22
       }
-    },
-    {
-      freezeTableName: true, // Model tableName will be the same as the model name
-      underscored: true
     }
   );
 
