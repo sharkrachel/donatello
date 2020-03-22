@@ -1,19 +1,56 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Example</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
-        </div>
+{{!-- shows most recently added projects --}}
+<!--New Homepage-->
+
+
+
+  <!--Need a jumbotron with text centered "GitCompare" possibly with background color-->
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron text-center">
+        <h1 class="title">GitCompare</h1>
       </div>
     </div>
   </div>
+  <!--Navbar-->
+  <div class="container">
+    <div class="row">
+      <!--Search button-->
+      <div class="col-sm text-center">
+        <a href="/search"><button class="search">Search User</button></a><!--Need a search page-->
+      </div>
+      <!--Compare button-->
+      <div class="col-sm text-center">
+        <a href="/compare"><button type class="compare">Add User</button></a> <!--Input page-->
+      </div>
+      <!--About button-->
+      <div class="col-sm text-center">
+        <a href="/about"><button class="about">Home</button></a><!--This is the home page??-->
+      </div>
+    </div>
+  </div>
+  <!--Create one row with 3 columns that will display images-->
+{{!-- Projects display --}}
+<div class="container">
+  <div class="row">
+    {{!-- loop through projects and display 3 most recent ones --}}
+      {{#each Projects}}
+      {{!-- {{#if this.}} Only allow the first 3 newest projects to display --}}
+        <div class="col-sm-4">
+          <img src="{{this.project_image}}">
+          <li>{{this.project_name}}</li>
+        </div>
+      {{!-- {{/if}} --}}
+      {{/each}}
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

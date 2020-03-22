@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    // Load index page
+   // GET route to display all projects by a specific user
     app.get("/api/user", function (req, res) {
         db.User.findAll({
             include: [db.Projects]
@@ -9,7 +9,6 @@ module.exports = function (app) {
             });
     });
 
-    // Load example page and pass in an example by id
     app.get("/user/:id", function (req, res) {
         db.User.findOne({
             where: {
