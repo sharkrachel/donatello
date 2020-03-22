@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="project-header">
+            Projects
+        </div>
+        <div class="search">
+            <form>
+                <div class="form-group">
+                    <label for="user-name">User Name</label>
+                    <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                        placeholder="Enter GitHub user name">
+                </div>
+                <button type="submit" id="user-form-input" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Add a Project
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add a Project</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-project">
+                            <form>
+                                <div class="form-group">
+                                    <label for="user-name">User Name</label>
+                                    <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                                        placeholder="Enter GitHub user name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-name">Project Name</label>
+                                    <input type="text" class="form-control" id="project-name"
+                                        aria-describedby="project-name" placeholder="Enter project name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-description">Project Description</label>
+                                    <input type="text" class="form-control" id="project-description"
+                                        aria-describedby="project-description"
+                                        placeholder="Enter the description of your project">
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-url">URL to Project</label>
+                                    <input type="text" class="form-control" id="project-url"
+                                        aria-describedby="project-url" placeholder="Enter URL link to your project">
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-image">Project Image</label>
+                                    <input type="text" class="form-control" id="project-image"
+                                        aria-describedby="project-image"
+                                        placeholder="Enter URL link to the image you want displayed for your project">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="all-projects">
+
+            </div>
+        </div>
+
 </body>
+
 </html>
