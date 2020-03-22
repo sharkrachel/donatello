@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Snoopdogg1!",
     "database": "Github_db",
     "host": "localhost",
     "dialect": "mysql"
