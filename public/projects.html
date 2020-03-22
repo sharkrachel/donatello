@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="project-header">
-            Projects
-        </div>
+            
         <div class="search">
             <form>
                 <div class="form-group">
                     <label for="user-name">User Name</label>
-                    <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                    <input type="text" class="form-control user-name" id="user-name" aria-describedby="user-name"
                         placeholder="Enter GitHub user name">
                 </div>
                 <button type="submit" id="user-form-input" class="btn btn-primary">Submit</button>
             </form>
         </div>
+       
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Add a Project
@@ -85,6 +84,11 @@
             </div>
         </div>
 
+        <div class="project-header text-center">
+            Projects
+        </div>
+
+</div>
 </body>
 
 </html>
