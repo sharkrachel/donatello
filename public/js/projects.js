@@ -23,6 +23,7 @@ $(document).ready(function() {
   }
 
   function postProject(projectData) {
+      console.log(projectData)
     $.post("/api/projects", projectData).then(console.log(projectData));
   }
 });
