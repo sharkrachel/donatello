@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function (app) {
+  // GET route to get all the projects
   app.get("/api/projects", function (req, res) {
     var query = {};
     if (req.query.user_id) {
@@ -15,10 +16,12 @@ module.exports = function (app) {
         res.json(dbProjects);
       });
   });
+
+  // this will find only a single project - not sure if we need this
   app.get("/api/projects/:id", function (req, res) {
-    db.Projects.findOne({
+    db.Projects.findAll({
       where: {
-        id: req.params.id
+        user: req.params.id
       },
       include: [db.Projects]
     })
@@ -27,6 +30,7 @@ module.exports = function (app) {
       });
   });
 
+  // POST route for saving a new project
   app.post("/api/projects", function (req, res) {
     db.Projects.create(req.body)
       .then(function (dbProjects) {
@@ -34,6 +38,7 @@ module.exports = function (app) {
       });
   });
 
+  // DELETE route for deleting projects
   app.delete("/api/projects/:id", function (req, res) {
     db.Projects.destroy({
       where: {
@@ -45,6 +50,7 @@ module.exports = function (app) {
       });
   });
 
+  // PUT route for updating projects
   app.put("/api/projects", function (req, res) {
     db.Projects.update(
       req.body,
