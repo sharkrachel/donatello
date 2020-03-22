@@ -1,3 +1,4 @@
+var db = require("../models")
 module.exports = function (app) {
    // GET route to display all projects by a specific user
     app.get("/api/user", function (req, res) {
@@ -8,6 +9,18 @@ module.exports = function (app) {
                 res.json(dbUser);
             });
     });
+
+
+    app.get("/api/user/:username", function (req, res) {
+        db.User.findOne({
+            where: {
+                name: req.params.username
+            }
+
+        }).then(function(dbUser) {
+            res.json(dbUser.id);
+        })
+    })
 
     app.get("/user/:id", function (req, res) {
         db.User.findOne({
