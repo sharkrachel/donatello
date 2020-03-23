@@ -5,7 +5,7 @@ $(document).ready(function() {
   var projectUrlInput = $("#project-url");
   var projectImageInput = $("#project-image");
   var newUserInput = $("#user-sign-up");
-
+  var projects;
   $("#new-project").on("click", handleProjectFormSubmit);
 
   // A function to handle what happens when the form is submitted to create new project
@@ -44,4 +44,9 @@ $(document).ready(function() {
   function postUser(newUserData) {
     $.post("/api/user", newUserData).then(console.log(newUserData));
   }
+
+  $.get("/api/projects", function(data) {
+    console.log("Projects", data);
+    projects = data;
+  });
 });
