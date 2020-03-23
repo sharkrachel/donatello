@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     //  if (!userName.val().trim().trim()) {
     //     return;
-    console.log("button works");
+
     postProject();
 
   }
