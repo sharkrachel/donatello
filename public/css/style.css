@@ -1,11 +1,21 @@
 body {
-    background-color: papayawhip;
+    background-color: rgb(228, 234, 255);
 }
-
+.Nav{
+    text-align: center;
+}
+.Navbar{
+    background-color: rgb(72, 72, 83);
+}
+.jumbotron{
+    text-align: center;
+}
 button {
     margin: 12px;
 }
-
+.btn{
+    border: solid rgb(236, 236, 236) 1px;
+}
 input {
     margin: 12px;
 }
@@ -18,7 +28,8 @@ label {
     margin: 12px;
 }
 
-.project-header {
+.projects {
     margin: 12px;
     font-size: 36px;
+    text-align: center;
 }
