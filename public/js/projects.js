@@ -24,6 +24,7 @@ $(document).ready(function() {
         projectImage: projectImageInput.val().trim(),
         UserId: dbUserId
       };
+
       $.post("/api/projects", projectData).then(console.log(projectData));
     });
   }
@@ -46,7 +47,25 @@ $(document).ready(function() {
   }
 
   $.get("/api/projects", function(data) {
-    console.log("Projects", data);
+    // console.log("Projects", data);
     projects = data;
+    displayProj(projects);
   });
+
+  // function to display results from API to html after response
+  function displayProj(projects) {
+    // set variable to shorten result string
+    var result = projects;
+
+    // loop through results
+    for (var i = 0; i < result.length; i++) {
+      // set variables to results and append them to html
+      var resultDiv = $("<div>");
+      var projectCard = result[i].projectName;
+      resultDiv.append(projectCard);
+      resultDiv.addClass("col-sm-3");
+      resultDiv.addClass("res-card");
+      $("#result-table").append(resultDiv);
+    }
+  }
 });
