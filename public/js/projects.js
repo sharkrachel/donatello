@@ -26,14 +26,14 @@ $(document).ready(function() {
       };
       if (
         !projectData.name ||
-        !projectData.projectImage ||
+        !projectData.projectDescription ||
         !projectData.projectDescription ||
         !projectData.projectLink ||
         !projectData.projectImage
       ) {
         alert("Please fill out empty forms");
       } else {
-        $.post("/api/projects", projectData);
+        $.post("/api/projects", projectData).then(getProjects);
       }
     });
   }
@@ -44,7 +44,6 @@ $(document).ready(function() {
   // function to call postUser function
   function handleUserFormSubmit(event) {
     event.preventDefault();
-
     postUser({
       name: newUserInput.val().trim()
     });
@@ -52,20 +51,25 @@ $(document).ready(function() {
 
   // A function to handle what happens when the form is submitted to create new user
   function postUser(newUserData) {
-    $.post("/api/user", newUserData).then(console.log(newUserData));
+    $.post("/api/user", newUserData);
   }
 
-  $.get("/api/projects", function(data) {
-    // console.log("Projects", data);
-    projects = data;
-    displayProj(projects);
-  });
+  function getProjects() {
+    $.get("/api/projects", function(data) {
+      // console.log("Projects", data);
+      projects = data;
+      displayProj(projects);
+    });
+  }
+
+  getProjects();
 
   // function to display results from API to html after response
   function displayProj(projects) {
     // set variable to shorten result string
     var result = projects;
 
+    $("#result-table").empty();
     // loop through results
     for (var i = 0; i < result.length; i++) {
       // set variables to results and append them to html
