@@ -24,8 +24,17 @@ $(document).ready(function() {
         projectImage: projectImageInput.val().trim(),
         UserId: dbUserId
       };
-
-      $.post("/api/projects", projectData).then(console.log(projectData));
+      if (
+        !projectData.name ||
+        !projectData.projectImage ||
+        !projectData.projectDescription ||
+        !projectData.projectLink ||
+        !projectData.projectImage
+      ) {
+        alert("Please fill out empty forms");
+      } else {
+        $.post("/api/projects", projectData);
+      }
     });
   }
 
