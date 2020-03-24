@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "rootroot",
-=======
-    "password": "root",
->>>>>>> 6324c37bc66cc40ca8455ee91eb28f3f563d491a
+    "password": "",
     "database": "Github_db",
     "host": "localhost",
     "dialect": "mysql"
