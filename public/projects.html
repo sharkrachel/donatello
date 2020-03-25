@@ -4,26 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pirate Coders Aarg!</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
-
-
 </head>
 
 <body>
 
-<!--Navbar-->
+    <!--Navbar-->
     <div class="row Navbar">
         <div class="col-lg-4 col-md-4 col-xs-12 Nav">
         <div class="col-lg-6 Nav">
             <div class="search form-inline">
                 <div class="form-group">
                     <input type="text" class="form-control user-name" id="github-user" aria-describedby="user-name"
-                        placeholder="GitHub user name" style="width: 350px;">
+                        placeholder="User Name" style="width: 350px;">
                     <button type="submit" id="user-form-input" class="btn btn-primary">Search</button>
                 </div>
 
@@ -33,14 +28,15 @@
         <div class="col-lg-4 col-md-4 col-xs-12 Nav">
 
         <div class="col-lg-6 Nav">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-2"
-                style="float: right;">
-                Add a Project
-            </button>
+
             <!--Sign up button-->
             <div class="sign-up">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-2"
+                    style="float: right;">
+                    Add a Project
+                </button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
                     style="float: right;">
                     Sign Up
                 </button>
@@ -59,9 +55,9 @@
                                 <div class="sign-up">
 
                                     <div class="form-group">
-                                        <label for="user-sign-up">Github Username</label>
+                                        <label for="user-sign-up">Username</label>
                                         <input type="text" class="form-control" id="user-sign-up"
-                                            aria-describedby="user-sign-up" placeholder="Enter GitHub user name">
+                                            aria-describedby="user-sign-up" placeholder="Enter User Name">
                                     </div>
 
                                 </div>
@@ -75,30 +71,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 Nav">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Add a Project
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add a Project</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="add-project">
-
     </div>
 
-
-
-    <!-- Add a Project Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -153,6 +128,7 @@
     </div>
     </div>
     </div>
+    </div>
     <!--Jumbotron Title-->
     <div class="jumbotron">
         <h1 class="display-4">GitCompare</h1>
@@ -172,7 +148,25 @@
         </div>
     </div>
 
-
+    <!-- Modal -->
+    <div id="project-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    <h3 class="modal-title">Project Info</h1>
+                </div>
+                <div class="modal-body">
+                    <h3 id="match-project-name"></h3>
+                    <h3 id="match-description"></h3>
+                   <h3><a id="match-link"></a></h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
