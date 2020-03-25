@@ -10,6 +10,9 @@ body {
 .jumbotron{
     text-align: center;
 }
+#match-project-name{
+    margin-bottom: 4rem;
+}
 button {
     margin: 12px;
 }
@@ -19,7 +22,13 @@ button {
 input {
     margin: 12px;
 }
-
+.modal-header{
+    width: 100%;
+    background-color: rgb(72, 72, 83);
+    color: white;
+    text-align: center;
+    display: block;
+}
 .user-name {
     width: 200px;
 }

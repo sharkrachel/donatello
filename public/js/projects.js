@@ -100,10 +100,8 @@ $(document).ready(function() {
     var link = $(this).data("id-3");
 
     // send project information to modal
-    $("#match-project-name").html("Project Name: " + "<br>" + name);
-    $("#match-description").html(
-      "Project Description: " + "<br>" + description
-    );
+    $("#match-project-name").html(name);
+    $("#match-description").html(description);
     $("#match-link").attr("href", link).attr("target", "_blank");
 
     // testing and debugging
