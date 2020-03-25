@@ -15,24 +15,40 @@
 </head>
 
 <body>
-    
 
+<!--Navbar-->
     <div class="row Navbar">
+<<<<<<< HEAD
         <div class="col-lg-4 col-md-4 col-xs-12 Nav">
+=======
+        <div class="col-lg-6 Nav">
+>>>>>>> e673016e63a15ec6c20d133ae547293d5d5828e2
             <div class="search form-inline">
                 <div class="form-group">
                     <input type="text" class="form-control user-name" id="github-user" aria-describedby="user-name"
-                    placeholder="GitHub user name">
+                        placeholder="GitHub user name" style="width: 350px;">
                     <button type="submit" id="user-form-input" class="btn btn-primary">Search</button>
                 </div>
-                
+
             </div>
         </div>
+<<<<<<< HEAD
         <div class="col-lg-4 col-md-4 col-xs-12 Nav">
+=======
+        <div class="col-lg-6 Nav">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-2"
+                style="float: right;">
+                Add a Project
+            </button>
+            <!--Sign up button-->
+>>>>>>> e673016e63a15ec6c20d133ae547293d5d5828e2
             <div class="sign-up">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    style="float: right;">
                     Sign Up
                 </button>
+                <!--Sign Up Modal-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -63,6 +79,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="col-lg-4 col-md-4 col-xs-12 Nav">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -81,64 +98,91 @@
                         </div>
                         <div class="modal-body">
                             <div class="add-project">
+=======
+>>>>>>> e673016e63a15ec6c20d133ae547293d5d5828e2
 
-                                <div class="form-group">
-                                    <label for="user-name">User Name</label>
-                                    <input type="text" class="form-control" id="user-name"
-                                        aria-describedby="user-name" placeholder="Enter GitHub user name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="project-name">Project Name</label>
-                                    <input type="text" class="form-control" id="project-name"
-                                        aria-describedby="project-name" placeholder="Enter project name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="project-description">Project Description</label>
-                                    <input type="text" class="form-control" id="project-description"
-                                        aria-describedby="project-description"
-                                        placeholder="Enter the description of your project">
-                                </div>
-                                <div class="form-group">
-                                    <label for="project-url">URL to Project</label>
-                                    <input type="text" class="form-control" id="project-url"
-                                        aria-describedby="project-url" placeholder="Enter URL link to your project">
-                                </div>
-                                <div class="form-group">
-                                    <label for="project-image">Project Image</label>
-                                    <input type="text" class="form-control" id="project-image"
-                                        aria-describedby="project-image"
-                                        placeholder="Enter URL link to the image you want displayed for your project">
-                                </div>
+    </div>
 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" id="new-project" class="btn btn-secondary"
-                                    data-dismiss="modal">Submit</button>
-                            </div>
-                        </div>
-                    </div>
+
+
+    <!-- Add a Project Modal -->
+    <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div id="all-projects">
+                <div class="modal-body">
+                    <div class="add-project">
+
+
+                        <div class="form-group">
+                            <label for="user-name">User Name</label>
+                            <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                                placeholder="Enter GitHub user name">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-name">Project Name</label>
+                            <input type="text" class="form-control" id="project-name" aria-describedby="project-name"
+                                placeholder="Enter project name">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-description">Project Description</label>
+                            <input type="text" class="form-control" id="project-description"
+                                aria-describedby="project-description"
+                                placeholder="Enter the description of your project">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-url">URL to Project</label>
+                            <input type="text" class="form-control" id="project-url" aria-describedby="project-url"
+                                placeholder="Enter URL link to your project">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-image">Project Image</label>
+                            <input type="text" class="form-control" id="project-image" aria-describedby="project-image"
+                                placeholder="Enter URL link to the image you want displayed for your project">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="new-project" class="btn btn-secondary"
+                            data-dismiss="modal">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="all-projects">
+        </div>
     </div>
+    </div>
+    </div>
+    <!--Jumbotron Title-->
     <div class="jumbotron">
+<<<<<<< HEAD
         <h1 class="display-4">GitCompare</h1>
         <p class="lead">A simple app to add and compare github users</p>
+=======
+        <h1 class="display-4">CoderGram</h1>
+        <p class="lead">A Showcase for Coding Projects</p>
+>>>>>>> e673016e63a15ec6c20d133ae547293d5d5828e2
         <hr class="my-4">
-        <p>It uses custom APIs and MVC blah blah blah.</p>
+        <!-- <p>It uses custom APIs and MVC blah blah blah.</p> -->
     </div>
     <div class="container ">
         <div class="row">
             <div class="col-lg-12 projects">
                 <h1>Featured Projects</h1>
                 <!-- Grid Of Recent Projects goes here -->
+                <div id="result-table" class="row text-center"></div>
             </div>
         </div>
     </div>
-        
-    
+
+
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

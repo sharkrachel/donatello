@@ -16,7 +16,6 @@ module.exports = function(app) {
     });
   });
 
-
   // this will find only a single project - not sure if we need this
   app.get("/api/projects/:id", function(req, res) {
     db.Project.findAll({
@@ -31,10 +30,7 @@ module.exports = function(app) {
 
   // POST route for saving a new project
   app.post("/api/projects", function(req, res) {
-    
-
-  
-    console.log("req.body: ", req.body)
+    console.log("req.body: ", req.body);
     db.Project.create(req.body).then(function(dbProject) {
       res.json(dbProject);
     });
