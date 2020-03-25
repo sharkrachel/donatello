@@ -75,14 +75,21 @@ $(document).ready(function () {
     for (var i = 0; i < result.length; i++) {
       // set variables to results and append them to html
       var project = $("<div>");
-      var projectCard = result[i].projectName;
+      var photo = $("<img>")
+      var projectCard;
+      // var image = result[i].projectImage;
+
+      photo.attr("src", result[i].projectImage);
+      photo.addClass("project-photo");
+     
       project.attr("data-id-1", result[i].projectName);
       project.attr("data-id-2", result[i].projectDescription);
       project.attr("data-id-3", result[i].projectLink);
       project.addClass("res-card");
       project.addClass("col-sm-3");
       project.append(projectCard);
-      $("#result-table").append(project);
+      project.prepend(photo);
+      $("#result-table").prepend(project);
     }
   }
 
@@ -104,7 +111,7 @@ $(document).ready(function () {
     $("#match-description").html(
       "Project Description: " + "<br>" + description
     );
-    $("#match-link").html("Project Link: " + "<br>" + link);
+    $("#match-link").attr("href", link).attr("target", "_blank").html(link);
 
     // testing and debugging
     console.log(name);
