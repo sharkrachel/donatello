@@ -7,6 +7,9 @@ body {
 }
 .Navbar{
     background-color: rgb(72, 72, 83);
+    position: fixed;
+    width: 100%;
+    margin: 0;
 }
 .jumbotron{
     text-align: center;
@@ -19,6 +22,9 @@ body {
 }
 .lead{
     color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
 }
 button {
     margin: 12px;
@@ -62,26 +68,17 @@ label {
 }
 .modal-title{
     text-indent:20px;
+    font-weight: bold;
 }
 .form-control{
     margin-left: auto;
 }
-/*sticky for navbar*?
-/* Page content */
-.content {
-    padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+
   
 
   .feature-projects{
-      color:rgb(166, 88, 179);
+      color:rgb(198, 105, 214);
+      font-family: Impact;
   }
 
 
