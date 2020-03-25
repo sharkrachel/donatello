@@ -16,6 +16,7 @@
         <div class="col-lg-6 Nav">
             <div class="search form-inline">
                 <div class="form-group">
+                    <h5 class="icon"> CG</h5>
                     <input type="text" class="form-control user-name" id="github-user" aria-describedby="user-name"
                         placeholder="User Name" style="width: 350px;">
                     <button type="submit" id="user-form-input" class="btn btn-primary">Search</button>
@@ -75,46 +76,49 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add a Project</h5>
+                    <h5 class="modal-title" id="exampleModalLabel" style="left;"><b>Add a Project</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="add-project">
+                <div class="container">
+                    <div class="modal-body">
+                        <div class="add-project">
 
 
-                        <div class="form-group">
-                            <label for="user-name">User Name</label>
-                            <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
-                                placeholder="Enter GitHub user name">
-                        </div>
-                        <div class="form-group">
-                            <label for="project-name">Project Name</label>
-                            <input type="text" class="form-control" id="project-name" aria-describedby="project-name"
-                                placeholder="Enter project name">
-                        </div>
-                        <div class="form-group">
-                            <label for="project-description">Project Description</label>
-                            <input type="text" class="form-control" id="project-description"
-                                aria-describedby="project-description"
-                                placeholder="Enter the description of your project">
-                        </div>
-                        <div class="form-group">
-                            <label for="project-url">URL to Project</label>
-                            <input type="text" class="form-control" id="project-url" aria-describedby="project-url"
-                                placeholder="Enter URL link to your project">
-                        </div>
-                        <div class="form-group">
-                            <label for="project-image">Project Image</label>
-                            <input type="text" class="form-control" id="project-image" aria-describedby="project-image"
-                                placeholder="Enter URL link to the image you want displayed for your project">
-                        </div>
+                            <div class="form-group">
+                                <label for="user-name">User Name</label>
+                                <input type="text" class="form-control" id="user-name" aria-describedby="user-name"
+                                    placeholder="Enter GitHub user name">
+                            </div>
+                            <div class="form-group">
+                                <label for="project-name">Project Name</label>
+                                <input type="text" class="form-control" id="project-name"
+                                    aria-describedby="project-name" placeholder="Enter project name">
+                            </div>
+                            <div class="form-group">
+                                <label for="project-description">Project Description</label>
+                                <input type="text" class="form-control" id="project-description"
+                                    aria-describedby="project-description"
+                                    placeholder="Enter the description of your project">
+                            </div>
+                            <div class="form-group">
+                                <label for="project-url">URL to Project</label>
+                                <input type="text" class="form-control" id="project-url" aria-describedby="project-url"
+                                    placeholder="Enter URL link to your project">
+                            </div>
+                            <div class="form-group">
+                                <label for="project-image">Project Image</label>
+                                <input type="text" class="form-control" id="project-image"
+                                    aria-describedby="project-image"
+                                    placeholder="Enter URL link to the image you want displayed for your project">
+                            </div>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="new-project" class="btn btn-secondary"
-                            data-dismiss="modal">Submit</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="new-project" class="btn btn-secondary"
+                                style="background-color: #6600cc" data-dismiss="modal">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,18 +130,23 @@
     </div>
     </div>
     <!--Jumbotron Title-->
-    <div class="jumbotron">
-        <h1 class="display-4">CoderGram</h1>
-        <p class="lead">A Showcase for Coding Projects</p>
-        <hr class="my-4">
-        <!-- <p>It uses custom APIs and MVC blah blah blah.</p> -->
-    </div>
-    <div class="container ">
-        <div class="row">
-            <div class="col-lg-12 projects">
-                <h1>Featured Projects</h1>
-                <!-- Grid Of Recent Projects goes here -->
-                <div id="result-table" class="row text-center"></div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4" style="font-family: Brush Script MT; font-size: 3000;"><b>Codergram</b></h1>
+
+            <p class="lead">A Showcase for Coding Projects</p>
+            <hr class="my-4">
+            <!-- <p>It uses custom APIs and MVC blah blah blah.</p> -->
+        </div>
+        <div class="content">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 projects">
+                        <h1 class="feature-projects">Featured Projects</h1>
+                        <!-- Grid Of Recent Projects goes here -->
+                        <div id="result-table" class="row text-center"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -148,7 +157,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"></button>
-                    <h3 class="modal-title">Project Info</h1>
+                    <h3 class="modal-title" style="font-family: cursive;">Project Info</h1>
                 </div>
                 <div class="modal-body">
                     <p id="match-project-name"></p>
@@ -165,6 +174,25 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="/js/projects.js"></script>
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementsByClassName("Nav");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 
 </body>
 

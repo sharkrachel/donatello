@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var userNameInput = $("#user-name");
   var projectNameInput = $("#project-name");
   var projectDescriptionInput = $("#project-description");
@@ -15,7 +15,7 @@ $(document).ready(function() {
   }
 
   function postProject() {
-    $.get("/api/user/" + userNameInput.val().trim()).then(function(dbUserId) {
+    $.get("/api/user/" + userNameInput.val().trim()).then(function (dbUserId) {
       var projectData = {
         name: userNameInput.val().trim(),
         projectName: projectNameInput.val().trim(),
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   // function to get projects from database and then call function to display them to page
   function getProjects() {
-    $.get("/api/projects", function(data) {
+    $.get("/api/projects", function (data) {
       projects = data;
       displayProj(projects);
     });
@@ -100,7 +100,7 @@ $(document).ready(function() {
   }
 
   // document on click function to get card data attributes, send them to modal and call modal function
-  $(document).on("click", ".res-card", function() {
+  $(document).on("click", ".res-card", function () {
     // assign variables to data attributes
     var name = $(this).data("id-1");
     var description = $(this).data("id-2");
@@ -122,3 +122,23 @@ $(document).ready(function() {
     displayModal();
   });
 });
+//sticky for navbar
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  myFunction();
+
+  // Get the navbar
+  var navbar = document.getElementsByClassName("Navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+}
