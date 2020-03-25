@@ -54,14 +54,15 @@ $(document).ready(function() {
     $.post("/api/user", newUserData);
   }
 
+  // function to get projects from database and then call function to display them to page
   function getProjects() {
     $.get("/api/projects", function(data) {
-      // console.log("Projects", data);
       projects = data;
       displayProj(projects);
     });
   }
 
+  // call get projects function
   getProjects();
 
   // function to display results from API to html after response
@@ -73,12 +74,44 @@ $(document).ready(function() {
     // loop through results
     for (var i = 0; i < result.length; i++) {
       // set variables to results and append them to html
-      var resultDiv = $("<div>");
+      var project = $("<div>");
       var projectCard = result[i].projectName;
-      resultDiv.append(projectCard);
-      resultDiv.addClass("col-sm-3");
-      resultDiv.addClass("res-card");
-      $("#result-table").append(resultDiv);
+      project.attr("data-id-1", result[i].projectName);
+      project.attr("data-id-2", result[i].projectDescription);
+      project.attr("data-id-3", result[i].projectLink);
+      project.addClass("res-card");
+      project.addClass("col-sm-3");
+      project.append(projectCard);
+      $("#result-table").append(project);
     }
   }
+
+  // function to open modal when project cards are clicked
+  function displayModal() {
+    // toggle modal to open
+    $("#project-modal").modal("toggle");
+  }
+
+  // document on click function to get card data attributes, send them to modal and call modal function
+  $(document).on("click", ".res-card", function() {
+    // assign variables to data attributes
+    var name = $(this).data("id-1");
+    var description = $(this).data("id-2");
+    var link = $(this).data("id-3");
+
+    // send project information to modal
+    $("#match-project-name").html("Project Name: " + "<br>" + name);
+    $("#match-description").html(
+      "Project Description: " + "<br>" + description
+    );
+    $("#match-link").html("Project Link: " + "<br>" + link);
+
+    // testing and debugging
+    console.log(name);
+    console.log(description);
+    console.log(link);
+
+    // call display modal function
+    displayModal();
+  });
 });

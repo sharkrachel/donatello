@@ -11,6 +11,7 @@
 
 <body>
 
+    <!--Navbar-->
     <div class="row Navbar">
         <div class="col-lg-6 Nav">
             <div class="search form-inline">
@@ -23,6 +24,8 @@
             </div>
         </div>
         <div class="col-lg-6 Nav">
+
+            <!--Sign up button-->
             <div class="sign-up">
 
                 <!-- Button trigger modal -->
@@ -33,6 +36,7 @@
                     style="float: right;">
                     Sign Up
                 </button>
+                <!--Sign Up Modal-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -64,8 +68,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -122,6 +124,8 @@
     </div>
     </div>
     </div>
+    </div>
+    <!--Jumbotron Title-->
     <div class="jumbotron">
         <h1 class="display-4">CoderGram</h1>
         <p class="lead">A Showcase for Coding Projects</p>
@@ -138,7 +142,25 @@
         </div>
     </div>
 
-
+    <!-- Modal -->
+    <div id="project-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    <h3 class="modal-title">Project Info</h1>
+                </div>
+                <div class="modal-body">
+                    <h3 id="match-project-name"></h3>
+                    <h3 id="match-description"></h3>
+                   <h3><a id="match-link"></a></h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
