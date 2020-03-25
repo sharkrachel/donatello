@@ -104,7 +104,7 @@ $(document).ready(function() {
     $("#match-description").html(
       "Project Description: " + "<br>" + description
     );
-    $("#match-link").attr("href", link).attr("target", "_blank").html(link);
+    $("#match-link").attr("href", link).attr("target", "_blank");
 
     // testing and debugging
     console.log(name);
