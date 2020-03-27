@@ -12,6 +12,7 @@ body {
     margin: 0;
 }
 .jumbotron{
+    margin-top: 1%;
     text-align: center;
     background-image: linear-gradient(to bottom right, rgb(166, 88, 179), rgb(228, 234, 255));
    
@@ -60,14 +61,16 @@ label {
 }
 
 .res-card {
-    height: 200px;
-    width: 100%;
-    background-color: rebeccapurple;
+   
     border-radius: 6px;
     margin: 12px;
     color: white;
 }
-
+.project-photo {
+    height: 200px;
+    width: 100%;
+}
+}
 .icon{
     color: white;
     padding-right: 20px;
