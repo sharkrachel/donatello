@@ -1,21 +1,14 @@
 $(document).ready(function () {
 
-  // var username = $("#github-user").val().trim();
   function displayUserProjects() {
-   
+
     var username = $("#github-user").val().trim()
-   window.location.href = "/api/user/" + username
+    window.location.href = "/api/user/" + username
 
   }
 
   $("#user-form-input").on("click", displayUserProjects)
 
-
-
-
-  // function displayUserProjects() {
-  //     $.get("/api/user=" + username);
-  // }
 
 });
 
