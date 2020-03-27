@@ -75,13 +75,12 @@ $(document).ready(function() {
     for (var i = 0; i < result.length; i++) {
       // set variables to results and append them to html
       var project = $("<div>");
-      var photo = $("<img>")
+      var photo = $("<img>");
       var projectCard;
       // var image = result[i].projectImage;
 
       photo.attr("src", result[i].projectImage);
       photo.addClass("project-photo");
-     
       project.attr("data-id-1", result[i].projectName);
       project.attr("data-id-2", result[i].projectDescription);
       project.attr("data-id-3", result[i].projectLink);
@@ -109,7 +108,9 @@ $(document).ready(function() {
     // send project information to modal
     $("#match-project-name").html(name);
     $("#match-description").html(description);
-    $("#match-link").attr("href", link).attr("target", "_blank");
+    $("#match-link")
+      .attr("href", link)
+      .attr("target", "_blank");
 
     // testing and debugging
     console.log(name);
@@ -120,3 +121,23 @@ $(document).ready(function() {
     displayModal();
   });
 });
+//sticky for navbar
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {
+  myFunction();
+
+  // Get the navbar
+  var navbar = document.getElementsByClassName("Navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+};

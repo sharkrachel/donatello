@@ -3,12 +3,28 @@ body {
 }
 .Nav{
     text-align: center;
+    overflow: hidden;
 }
 .Navbar{
     background-color: rgb(72, 72, 83);
+    position: fixed;
+    width: 100%;
+    margin: 0;
 }
 .jumbotron{
     text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(166, 88, 179), rgb(228, 234, 255));
+   
+}
+.display-4 {
+    font-size: 100px;
+    color: white;
+}
+.lead{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
 }
 #match-project-name{
     margin-bottom: 4rem;
@@ -51,3 +67,27 @@ label {
     margin: 12px;
     color: white;
 }
+
+.icon{
+    color: white;
+    padding-right: 20px;
+    text-indent: 20px;
+    font-family: Arial Narrow;
+    font-weight: bold;;
+}
+.modal-title{
+    text-indent:20px;
+    font-weight: bold;
+}
+.form-control{
+    margin-left: auto;
+}
+
+  
+
+  .feature-projects{
+      color:rgb(198, 105, 214);
+      font-family: Impact;
+  }
+
+
