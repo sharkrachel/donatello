@@ -14,7 +14,6 @@ module.exports = function(app) {
         name: req.params.username
       }
     }).then(function(dbUser) {
-      console.log("dbuser: ", dbUser.dataValues.id)
       db.Project.findAll({
         where: {
           UserId: dbUser.dataValues.id
