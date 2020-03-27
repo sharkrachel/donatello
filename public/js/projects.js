@@ -15,7 +15,7 @@ $(document).ready(function() {
   }
 
   function postProject() {
-    $.get("/api/user/" + userNameInput.val().trim()).then(function(dbUserId) {
+    $.get("/api/projects/" + userNameInput.val().trim()).then(function(dbUserId) {
       var projectData = {
         name: userNameInput.val().trim(),
         projectName: projectNameInput.val().trim(),
