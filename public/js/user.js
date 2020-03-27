@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $("#user-form-input-2").on("click", test)
+    // $("#user-form-input-2").on("click", test)
 
-    var username = $("#github-user").val().trim();
+    // var username = $("#github-user").val().trim();
 
-    function displayUser(userData) {
-        $.post("/api/users")
-    }
+    // function displayUser(userData) {
+    //     $.post("/api/users")
+    // }
 
 });
 
