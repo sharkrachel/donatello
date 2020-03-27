@@ -11,17 +11,20 @@
 </head>
 
 <body>
-
+    <!--test-->
     <!--Navbar-->
     <div class="row Navbar sticky-top">
         <div class="col-lg-8 Nav">
             <div class="search form-inline">
-                <div class="form-group">
-                    <h5 class="icon"> CG</h5>
-                    <input type="text" class="form-control user-name" id="github-user" aria-describedby="user-name"
-                        placeholder="User Name" style="width: 350px;">
-                    <button type="submit" id="user-form-input" class="btn btn-primary">Search</button>
-                </div>
+                <!-- <form action="/user.html" method="GET"> -->
+                    <div class="form-group">
+                        <h5 class="icon"> CG</h5>
+                        <input type="text" class="form-control" id="github-user" aria-describedby=""
+                            placeholder="Github Username">
+                        <button type="submit" id="user-form-input" class="btn btn-primary">Search</button>
+                    </div>
+                <!-- </form> -->
+
 
             </div>
         </div>
@@ -60,8 +63,8 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" id="new-user" class="btn btn-secondary" style="background-color: #6600cc"
-                                        data-dismiss="modal">Submit</button>
+                                    <button type="button" id="new-user" class="btn btn-secondary"
+                                        style="background-color: #6600cc" data-dismiss="modal">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -157,16 +160,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"></button>
+                    <button type="button" class="close" id="x" data-dismiss="modal">X</button>
                     <h3 class="modal-title" style="font-family: cursive;">Project Info</h1>
                 </div>
                 <div class="modal-body">
-                    <p id="match-project-name"></p>
+                    <h3 id="match-project-name"></h3>
+                    <h4>Description:</h4>
                     <p id="match-description"></p>
-                   <p><a id="match-link"></a></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    <a id="match-link"><button type="button" class="btn btn-primary">View Project</button></a>
                 </div>
             </div>
         </div>
@@ -176,7 +180,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="/js/user.js"></script>
     <script src="/js/projects.js"></script>
-    
+
 
 </body>
 

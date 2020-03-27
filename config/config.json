@@ -2,14 +2,13 @@
   "development": {
     "username": "root",
     "password": "Snoopdogg1!",
-
     "database": "Github_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

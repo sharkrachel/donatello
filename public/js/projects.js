@@ -75,13 +75,12 @@ $(document).ready(function() {
     for (var i = 0; i < result.length; i++) {
       // set variables to results and append them to html
       var project = $("<div>");
-      var photo = $("<img>")
+      var photo = $("<img>");
       var projectCard;
       // var image = result[i].projectImage;
 
       photo.attr("src", result[i].projectImage);
       photo.addClass("project-photo");
-     
       project.attr("data-id-1", result[i].projectName);
       project.attr("data-id-2", result[i].projectDescription);
       project.attr("data-id-3", result[i].projectLink);
@@ -107,11 +106,11 @@ $(document).ready(function() {
     var link = $(this).data("id-3");
 
     // send project information to modal
-    $("#match-project-name").html("Project Name: " + "<br>" + name);
-    $("#match-description").html(
-      "Project Description: " + "<br>" + description
-    );
-    $("#match-link").attr("href", link).attr("target", "_blank").html(link);
+    $("#match-project-name").html(name);
+    $("#match-description").html(description);
+    $("#match-link")
+      .attr("href", link)
+      .attr("target", "_blank");
 
     // testing and debugging
     console.log(name);

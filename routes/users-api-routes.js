@@ -10,17 +10,18 @@ module.exports = function(app) {
   });
 
   app.get("/api/user/:username", function(req, res) {
-    db.User.findOne({
+    db.User.findAll({
       where: {
         name: req.params.username
-      }
+      },
+      
     }).then(function(dbUser) {
       res.json(dbUser.id);
     });
   });
 
   app.get("/user/:id", function(req, res) {
-    db.User.findOne({
+    db.User.findAll({
       where: {
         id: req.params.id
       },

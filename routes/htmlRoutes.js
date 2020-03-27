@@ -18,8 +18,9 @@ module.exports = function (app) {
   });
 
   // this page will display all projects for a specific user
-  app.get("/user", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/users.html"));
+  app.get("/api/user", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
 };
+
