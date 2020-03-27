@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 .jumbotron{
-    margin-top: 1%;
+    margin-top: 12%;
     text-align: center;
     background-image: linear-gradient(to bottom right, rgb(166, 88, 179), rgb(228, 234, 255));
    
@@ -67,7 +67,7 @@ label {
 .project-photo {
     height: 200px;
     width: 100%;
-}
+
 }
 .icon{
     color: white;
