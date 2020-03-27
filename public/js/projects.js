@@ -84,8 +84,9 @@ $(document).ready(function() {
       project.attr("data-id-1", result[i].projectName);
       project.attr("data-id-2", result[i].projectDescription);
       project.attr("data-id-3", result[i].projectLink);
+      project.addClass("col-lg-3");
       project.addClass("res-card");
-      project.addClass("col-sm-3");
+      project.addClass("text-center");
       project.append(projectCard);
       project.prepend(photo);
       $("#result-table").prepend(project);

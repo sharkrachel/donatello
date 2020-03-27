@@ -52,13 +52,11 @@ input {
 label {
     margin: 12px;
 }
-
 .projects {
     margin: 12px;
     font-size: 36px;
     text-align: center;
 }
-
 .res-card {
     height: 200px;
     width: 100%;
@@ -82,12 +80,10 @@ label {
 .form-control{
     margin-left: auto;
 }
-
-  
-
-  .feature-projects{
+.feature-projects{
       color:rgb(198, 105, 214);
       font-family: Impact;
-  }
+}
+
 
 
