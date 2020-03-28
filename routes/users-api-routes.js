@@ -1,13 +1,6 @@
 var db = require("../models");
 module.exports = function(app) {
-  // GET route to display all projects by a specific user
-  // app.get("/api/user", function(req, res) {
-  //   db.User.findAll({
-  //     include: [db.Projects]
-  //   }).then(function(dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
+
   app.get("/api/user/:username", function(req, res) {
     // console.log("req.params: ", req.params);
     db.User.findOne({
@@ -22,23 +15,12 @@ module.exports = function(app) {
         }
       })
       .then(function(data) {
-        res.json(data);
-        console.log("data: ", data[0]);
-        
+        res.json(data);        
       })
  
     });
   });
-  // app.get("/user/:id", function(req, res) {
-  //   db.User.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     },
-  //     include: [dbProjects]
-  //   }).then(function(dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
+
   app.post("/api/user", function(req, res) {
     db.User.create(req.body).then(function(dbUser) {
       res.json(dbUser);

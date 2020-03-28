@@ -13,12 +13,12 @@ $(document).ready(function () {
   var username = urlParams[urlParams.length - 1];
   // console.log(username);
   function getProjects() {
-    $.get("/api/user/" + username, function (data) {
+    $.get("/api/user/" + username, function(data) {
       displayProj(data)
-
     })
   }
 getProjects();
+
   function displayProj(data) {
     // set variable to shorten result string
     $("#result-table").empty();
