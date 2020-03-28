@@ -12,7 +12,7 @@ module.exports = function (app) {
   });
 
   // this page will display all projects for a specific user
-  app.get("/user/:username", function (req, res) {
+  app.get("/user/:username/projects", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 

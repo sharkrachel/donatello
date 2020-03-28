@@ -13,7 +13,9 @@ $(document).ready(function() {
     postProject();
   }
   function postProject() {
-    $.get("/api/user/" + userNameInput.val().trim()).then(function(dbUserId) {
+    $.get("/api/user/" + userNameInput.val().trim())
+    .then(function(dbUserId) {
+      console.log(dbUserId);
       var projectData = {
         name: userNameInput.val().trim(),
         projectName: projectNameInput.val().trim(),
@@ -46,6 +48,7 @@ $(document).ready(function() {
   }
   // A function to handle what happens when the form is submitted to create new user
   function postUser(newUserData) {
+    console.log(newUserData);
     $.post("/api/user", newUserData);
   }
   // function to get projects from database and then call function to display them to page

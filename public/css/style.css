@@ -1,5 +1,4 @@
 body { 
-    background: url("/css/images/beach-3.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,6 +8,7 @@ body {
     text-align: center;
     overflow: hidden;
 }
+
 .Navbar {
     background-color: rgb(72, 72, 83);
     position: fixed;
