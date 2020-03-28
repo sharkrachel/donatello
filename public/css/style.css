@@ -1,47 +1,48 @@
-body {
-    background-color: rgb(228, 234, 255);
+body { 
+    background: url("/css/images/beach-3.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-.Nav{
+.Nav {
     text-align: center;
     overflow: hidden;
 }
-.Navbar{
+.Navbar {
     background-color: rgb(72, 72, 83);
     position: fixed;
     width: 100%;
     margin: 0;
 }
-.jumbotron{
-    margin-top: 8%;
-    height: 280px;
+.jumbotron {
+    margin-top: 12%;
     text-align: center;
     background-image: linear-gradient(to bottom right, rgb(166, 88, 179), rgb(228, 234, 255));
-   
 }
 .display-4 {
     font-size: 100px;
     color: white;
     margin-top: -30px;
 }
-.lead{
+.lead {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
-    
 }
-#match-project-name{
+#match-project-name {
     margin-bottom: 4rem;
 }
 button {
     margin: 12px;
 }
-.btn{
+.btn {
     border: solid rgb(236, 236, 236) 1px;
 }
 input {
     margin: 12px;
 }
-.modal-header{
+.modal-header {
     width: 100%;
     background-color: rgb(72, 72, 83);
     color: white;
@@ -51,7 +52,6 @@ input {
 .user-name {
     width: 200px;
 }
-
 label {
     margin: 12px;
 }
@@ -60,17 +60,17 @@ label {
     font-size: 36px;
     text-align: center;
 }
-/* .res-card {
-   
-    border-radius: 6px;
-    margin: 15px, -35px;
-    padding: 0px;
-    color: white;
-} */
 .project-photo {
-    height: 160px;
-    width: 160px;
-
+    height: 200px;
+    width: 180px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    opacity: .8;
+    margin: 12px;
+}
+.project-photo:hover {
+    opacity: 1;
+    border: 3px solid rgb(80, 85, 151);
 }
 .icon{
     color: white;
@@ -90,10 +90,6 @@ label {
       color:rgb(198, 105, 214);
       font-family: Impact;
 }
-
-
   #x {
       color: white;
   }
-
-
