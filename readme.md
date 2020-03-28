@@ -28,11 +28,11 @@ An app that will...
 * MySql
 * Handlebars
 * Figma
-* D3.js
 
 
 ## APIs
 * GitHub
 
+
 ## Check it out!
-CODERGRAM
+[CODERGRAM](https://coder-gram.herokuapp.com/)
