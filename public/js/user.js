@@ -3,17 +3,17 @@ $(document).ready(function () {
   function displayUserProjects() {
 
     var username = $("#github-user").val().trim()
-    window.location.href = "/user/" + username
+    window.location.href = "/user/" + username + "/projects"
 
   }
 
   $("#user-form-input").on("click", displayUserProjects)
 
   var urlParams = window.location.href.split("/")
-  var username = urlParams[urlParams.length - 1];
+  var username = urlParams[urlParams.length - 2];
   // console.log(username);
   function getProjects() {
-    $.get("/api/user/" + username, function(data) {
+    $.get("/api/user/" + username + "/projects", function(data) {
       displayProj(data)
     })
   }
@@ -41,6 +41,30 @@ getProjects();
       $("#result-table").prepend(project);
     }
   }
+
+  function displayModal() {
+    // toggle modal to open
+    $("#project-modal").modal("toggle");
+  }
+  // document on click function to get card data attributes, send them to modal and call modal function
+  $(document).on("click", ".res-card", function() {
+    // assign variables to data attributes
+    var name = $(this).data("id-1");
+    var description = $(this).data("id-2");
+    var link = $(this).data("id-3");
+    // send project information to modal
+    $("#match-project-name").html(name);
+    $("#match-description").html(description);
+    $("#match-link")
+      .attr("href", link)
+      .attr("target", "_blank");
+    // testing and debugging
+    console.log(name);
+    console.log(description);
+    console.log(link);
+    // call display modal function
+    displayModal();
+  });
 
 });
 
