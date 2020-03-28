@@ -1,7 +1,7 @@
 # donatello
 Project 2
 
-### GitHub Instagram Thing (name pending...)
+### CoderGram - A social media site for coders to display their projects.
 
 ## TEAMS
 Front end
@@ -28,8 +28,11 @@ An app that will...
 * MySql
 * Handlebars
 * Figma
-* D3.js
 
 
 ## APIs
 * GitHub
+
+
+## Check it out!
+[CODERGRAM](https://coder-gram.herokuapp.com/)

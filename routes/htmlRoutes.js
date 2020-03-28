@@ -7,19 +7,14 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/projects.html"));
   });
 
-  app.get("/cms", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
-  });
-
-
-
   app.get("/projects", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/projects.html"));
   });
 
   // this page will display all projects for a specific user
-  app.get("/user", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/users.html"));
+  app.get("/user/:username/projects", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
 };
+
