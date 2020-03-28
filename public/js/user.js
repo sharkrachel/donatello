@@ -3,13 +3,21 @@ $(document).ready(function () {
   function displayUserProjects() {
 
     var username = $("#github-user").val().trim()
-    window.location.href = "/api/user/" + username
+    window.location.href = "/user/" + username
 
   }
 
   $("#user-form-input").on("click", displayUserProjects)
 
+  var urlParams = window.location.href.split("/")
+  var username = urlParams[urlParams.length -1];
+  // console.log(username);
 
+  $.get("/api/user/" + username, function (data) {
+    console.log(data);
+  })
+
+  
 });
 
 

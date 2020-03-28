@@ -9,11 +9,13 @@ module.exports = function(app) {
   //   });
   // });
   app.get("/api/user/:username", function(req, res) {
+    // console.log("req.params: ", req.params);
     db.User.findOne({
       where: {
         name: req.params.username
       }
     }).then(function(dbUser) {
+      // console.log("dbUser: ", dbUser)
       db.Project.findAll({
         where: {
           UserId: dbUser.dataValues.id
@@ -21,6 +23,8 @@ module.exports = function(app) {
       })
       .then(function(data) {
         res.json(data);
+        console.log("data: ", data[0]);
+        
       })
  
     });

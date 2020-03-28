@@ -18,8 +18,8 @@ module.exports = function (app) {
   });
 
   // this page will display all projects for a specific user
-  app.get("/user", function (req, res) {
-    res.render(path.join(__dirname, "../views/users.handlebars"));
+  app.get("/user/:username", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
 };
