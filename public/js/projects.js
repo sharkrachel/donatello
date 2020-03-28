@@ -72,7 +72,7 @@ $(document).ready(function() {
 
     $("#result-table").empty();
     // loop through results
-    for (var i = 0; i < result.length; i++) {
+    for (var i = 0; i < 9; i++) {
       // set variables to results and append them to html
       var project = $("<div>");
       var photo = $("<img>");
