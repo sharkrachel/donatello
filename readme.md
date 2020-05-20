@@ -2,7 +2,7 @@
 Project 2
 
 ### CoderGram - A social media site for coders to display their projects.
-
+![catGif](https://i.imgur.com/ma34EFh.png)
 ## TEAMS
 Front end
 * Zack
