@@ -1,5 +1,5 @@
 # donatello
-Project 2
+
 
 ### CoderGram - A social media site for coders to display their projects.
 
