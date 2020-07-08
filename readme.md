@@ -2,7 +2,9 @@
 
 
 ### CoderGram - A social media site for coders to display their projects.
-
+[Try it here!](https://coder-gram.herokuapp.com/
+)
+![catGif](https://i.imgur.com/ma34EFh.png)
 ## TEAMS
 Front end
 * Zack
@@ -34,5 +36,4 @@ An app that will...
 * GitHub
 
 
-## Check it out!
-[CODERGRAM](https://coder-gram.herokuapp.com/)
+
